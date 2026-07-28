@@ -1,6 +1,6 @@
 ---
 title: spi
-published: 2026-7-28
+published: 1970-01-01
 description: 讲解SPI通讯协议
 tags: [PlantUML, Firefly, Markdown]
 category: 硬件
