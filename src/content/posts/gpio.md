@@ -6,7 +6,6 @@ description: stm32 GPIO
 tags: [Markdown, Firefly]
 category: 硬件
 image: ./images/firefly3.avif
-slug: code-examples
 ---
 
 ## 
