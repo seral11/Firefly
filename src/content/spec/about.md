@@ -13,7 +13,7 @@
 
 **🏠我的博客： [https://blog.cuteleaf.cn](https://blog.cuteleaf.cn/)**
 
-**🏠我的Github： [https://github.com/seral11/](https://blog.cuteleaf.cn/)**
+**🏠我的Github： [https://github.com/seral11/](https://github.com/seral11/)**
 
 **📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
 
