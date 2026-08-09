@@ -19,3 +19,13 @@ PWR 控制STM32内部的电源供电，可实现可编程电压检测器(PVD)和
 
 ---
 ![alt text](image.png)
+---
+![alt text](image-1.png)
+POR 阈值上限    
+PDR 阈值下限  
+数据参考STM32F10XXX手册5.3.3
+---
+![alt text](image-2.png)
+---
+![alt text](image-3.png)
+---
