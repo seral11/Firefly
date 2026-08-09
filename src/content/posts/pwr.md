@@ -25,7 +25,15 @@ POR 阈值上限
 PDR 阈值下限  
 数据参考STM32F10XXX手册5.3.3
 ---
+
+## PVD
+---
 ![alt text](image-2.png)
 ---
 ![alt text](image-3.png)
+---
+
+## 低功耗模式
+---
+![alt text](image-4.png)
 ---
