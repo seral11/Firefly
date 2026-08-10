@@ -8,9 +8,9 @@ category: STM32标准库
 image: ./images/lv1.png
 ---
 
-| 函数 | return | 功能 |
+| 库函数 | return | 功能 |
 | :--- | :--- | :--- |
-| PWR_DeInit(void)|void|回复缺省配置|
+| PWR_DeInit(void)|void|恢复缺省配置|
 | PWR_BackupAccessCmd(FunctionalState NewState)|void|使能后备区域访问|
 | PWR_PVDCmd(FunctionalState NewState)|void|使能PVD|
 | PWR_PVDLevelConfig(uint32_t PWR_PVDLevel)|void|配置PVD电压|
