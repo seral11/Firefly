@@ -38,3 +38,5 @@ PDR 阈值下限
 ---
 ![alt text](image-4.png)
 ---
+### 停止模式
+进入并退出后系统将默认选择HSL(8MHz)主频,如有需要应调用SystemInit()重置为HSE(9*8MHz)
