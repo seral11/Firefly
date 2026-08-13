@@ -20,7 +20,7 @@ image: ./images/lv1.png
 |IWDG_GetFlagStatus(uint16_t IWDG_FLAG)|FlagStatus|获取标志位|
 ---
 
-### 示例
+```powershell title="示例"
 void IWDG_INIT(void){
 	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
 	IWDG_SetPrescaler(IWDG_Prescaler_16);
@@ -28,3 +28,4 @@ void IWDG_INIT(void){
 	IWDG_ReloadCounter();
 	IWDG_Enable();
 }
+```
