@@ -42,7 +42,7 @@ STM32看门狗资源：
 
 ---
 ## 窗口看门狗
-![alt text](images\image-7.png)
+![alt text](images\image7.png)
 T6被视为溢出标志位寄存器
 WDGA为使能寄存器
 
