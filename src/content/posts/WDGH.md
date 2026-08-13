@@ -26,7 +26,6 @@ void IWDG_INIT(void){
 	IWDG_SetReload(2500-1);
 	IWDG_ReloadCounter();
 	IWDG_Enable();
-    console.log('此代码有语法高亮!')
 }
 ```
 ---
