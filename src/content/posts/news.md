@@ -9,3 +9,17 @@ draft: false
 ---
 
 # 以下是测试段
+| 语言 | 后缀写法 |
+|---|---|
+| C | `c` |
+| C++ | `cpp` |
+| Python | `python` |
+| JavaScript | `js` |
+| TypeScript | `ts` |
+| Java | `java` |
+| HTML | `html` |
+| CSS | `css` |
+| Bash / Shell | `bash` |
+| JSON | `json` |
+| SQL | `sql` |
+| Markdown | `markdown` |
