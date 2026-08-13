@@ -18,9 +18,9 @@ PWR 控制STM32内部的电源供电，可实现可编程电压检测器(PVD)和
 |低功耗模式|睡眠（Sleep） 停机（Stop） 待机（Standby）|当系统处于空闲时可降低功耗（修改主频来实现）|
 
 ---
-![alt text](images\image.png)
+![alt text](images/image.png)
 ---
-![alt text](images\image-1.png)
+![alt text](images/image-1.png)
 
 POR 阈值上限    
 PDR 阈值下限  
@@ -29,14 +29,14 @@ PDR 阈值下限
 
 ## PVD
 ---
-![alt text](images\image-2.png)
+![alt text](images/image-2.png)
 ---
-![alt text](images\image-3.png)
+![alt text](images/image-3.png)
 ---
 
 ## 低功耗模式
 ---
-![alt text](images\image-4.png)
+![alt text](images/image-4.png)
 ---
 ### 停止模式
 进入并退出后系统将默认选择HSL(8MHz)主频,如有需要应调用SystemInit()重置为HSE(9*8MHz)
