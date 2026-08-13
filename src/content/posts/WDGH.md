@@ -18,14 +18,15 @@ image: ./images/lv1.png
 |IWDG_ReloadCounter(void)|void|将重装载寄存器的值重新加载至自减计数器(喂狗)|
 |IWDG_Enable(void)|void|启动独立看门狗|
 |IWDG_GetFlagStatus(uint16_t IWDG_FLAG)|FlagStatus|获取标志位|
----
 
-```powershell title="示例"
+```c powershell title="示例"
 void IWDG_INIT(void){
 	IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
 	IWDG_SetPrescaler(IWDG_Prescaler_16);
 	IWDG_SetReload(2500-1);
 	IWDG_ReloadCounter();
 	IWDG_Enable();
+    console.log('此代码有语法高亮!')
 }
 ```
+---
