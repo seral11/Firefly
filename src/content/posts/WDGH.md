@@ -8,7 +8,7 @@ category: STM32标准库
 image: ./images/lv1.png
 ---
 ## IWDG独立看门狗
-![alt text](image-5.png)
+![alt text](images\image-5.png)
 
 | 库函数 | return | 功能 |
 | :--- | :--- | :--- |
