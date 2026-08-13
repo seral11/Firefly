@@ -37,13 +37,13 @@ STM32看门狗资源：
 
 0xAAAA指令会避免自减计数器自减至0触发复位(更新中断)
 ### 超时时间
-![alt text](image-6.png)
+![alt text](images\image-6.png)
 独立看门狗由LSI时钟(40KHz)驱动，启动看门狗后LSI会自动被强制振荡，无需手动开启
 
 ---
 ## 窗口看门狗
-![alt text](image-7.png)
+![alt text](images\image-7.png)
 T6被视为溢出标志位寄存器
 WDGA为使能寄存器
 
-![alt text](image-8.png)
+![alt text](images\image-8.png)
