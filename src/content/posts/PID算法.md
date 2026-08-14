@@ -5,7 +5,7 @@ pinned: false
 description: PID
 tags: [Markdown, Firefly]
 category: 算法
-image: ./images/lv2.png
+image: ./images/lv2.jpg
 ---
 # 什么是PID
 
