@@ -10,20 +10,36 @@ image: ./images/lv1.png
 
 # FLASH闪存
 STM32F1系列的FLASH包含：<span style="color:#61AFEF;"><span title="主存储器  64K只有64页">程序存储器</span> 系统存储器 选项字节</span>
+
 通过外设<span style="color:#61AFEF;">闪存存储器接口</span>可以对程序存储器和选项字节进行擦除和编程
 
-常用于：利用程序存储器的剩余空间来保存掉电不丢失的用户数据
+常用于：利用程序存储器的剩余空间来保存掉电不丢失的用户数据  
        通过在程序中编程（IAP），实现程序的自我更新
 ![alt text](images/6.png)
-
+| FPEC寄存器 | 功能 |
+| :--- | :--- |
+|FLASH_ACR||
+|FLASH_KEYR||
+|FLASH_OPTKEYR||
+|FLASH_SR||
+|FLASH_CR||
+|FLASH_AR||
+|保留||
+|FLASH_OBR||
+|FLASH_WRPR||
 ## FLASH解锁
-KEY2 = 0xCDEF89AB
-解锁：
-	复位后，FPEC被保护，不能写入FLASH_CR
-	在FLASH_KEYR先写入KEY1，再写入KEY2，解锁
-	错误的操作序列会在下次复位前锁死FPEC和FLASH_CR
+STM32中FLASH的编程与擦除操作由<span style="color:#61AFEF;"><span title="闪存存储器接口寄存器">FPEC</span>控制，默认状态下FPEC处于锁定状态，且FLASH_CR寄存器LOCK位为1，FLASH_CR处于写保护
 
-## 访问存储器
+解锁流程：
+	复位后，FPEC被保护，不能写入FLASH_CR  
+	在FLASH_KEYR先写入KEY1，再写入KEY2，解锁  
+	(错误的操作序列会在下次复位前锁死FPEC和FLASH_CR)
+
+FPEC解锁后,FLASH_CR的LOCK位自动变为0。   
+才能配置 PG（编程）、PER（页擦除）、MER（全片擦除）等控制位，并触发编程/擦除操作。
+
+## 存储器操作
+### 读取
 使用指针读指定地址下的存储器：
 	uint16_t Data = *((__IO uint16_t *)(0x08000000));
 
@@ -33,9 +49,14 @@ KEY2 = 0xCDEF89AB
 其中：
 	#define    __IO    volatile
 
+### 编程
 ![alt text](image-1.png)
+### 页擦除
 ![alt text](image-2.png)
+### 全擦除
 ![alt text](image-3.png)
+
+---
 ## 选择字节
 ![alt text](image-4.png)
 RDP：写入RDPRT键（0x000000A5）后解除读保护  
