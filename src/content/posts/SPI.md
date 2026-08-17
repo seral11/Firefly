@@ -7,9 +7,6 @@ tags: [Markdown, Firefly]
 category: 硬件
 image: ./images/
 ---
-
-
-# SPI
 <span style="color:#61AFEF;">SPI（Serial Peripheral Interface）</span>是由Motorola公司开发的一种通用数据总线
 
 工作模式/特点：<span style="color:#61AFEF;">同步 全双工 一主多从</span> 
@@ -25,5 +22,5 @@ SPI协议规定：所有硬件设备的<span style="color:#61AFEF;">SCK MOSI MIS
 ![alt text](image-6.png)
 ## 时序
 ![alt text](image-7.png)
-
+ 
 
