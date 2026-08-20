@@ -7,7 +7,7 @@ tags: [Markdown, Firefly]
 category: 硬件
 image: ./images/firefly3.avif
 ---
-# 
+# 特点
 - 两根通信线：SCL（Serial Clock）、SDA（Serial Data）
 - 同步，半双工
 - 带数据应答
