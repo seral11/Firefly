@@ -5,22 +5,21 @@ pinned: false
 description: IIC简单说明
 tags: [Markdown, Firefly]
 category: 硬件
-image: ./images/lv2.png
+image: ./images/lv2.jpg
 ---
 # 特点
 - 两根通信线：SCL（Serial Clock）、SDA（Serial Data）
 - 同步，半双工
 - 带数据应答
 - 支持总线挂载多设备（一主多从、多主多从）
-- 高位先行（一般）
+- 高位先行（常见模式）
 
 要求：
 - 所有I2C设备的SCL连在一起，SDA连在一起
 - 设备的SCL和SDA均要配置成开漏输出模式
-
+- SCL和SDA各添加一个上拉电阻，阻值一般为4.7KΩ左右
 <span style="color:#61AFEF;">I²C 总线采用 开漏输出 结构，SCL 和 SDA 线上都接有上拉电阻。设备通过将引脚拉低来输出逻辑 0，通过将引脚设置为高阻（开漏输出高电平或输入模式）来输出逻辑 1，此时总线电平由上拉电阻拉高</span>
 
-- SCL和SDA各添加一个上拉电阻，阻值一般为4.7KΩ左右
 ## 时序
 - 空闲状态：SCL高电平 SDA高电平
 <span style="color:#61AFEF;"></span>
