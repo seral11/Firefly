@@ -1,6 +1,6 @@
 ---
 title: IIC
-published: 2026-08-20
+published: 2026-08-21
 pinned: false
 description: 
 tags: [Markdown, Firefly]
