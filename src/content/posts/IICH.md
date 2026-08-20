@@ -2,7 +2,7 @@
 title: IIC.H
 published: 2026-08-21
 pinned: false
-description: 
+description: STM32I2C标准库
 tags: [Markdown, Firefly]
 category: STM32标准库
 image: ./images/firefly3.avif
