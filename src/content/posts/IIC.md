@@ -2,10 +2,10 @@
 title: IIC
 published: 2026-08-21
 pinned: false
-description: 
+description: IIC简单说明
 tags: [Markdown, Firefly]
 category: 硬件
-image: ./images/firefly3.avif
+image: ./images/lv1.png
 ---
 # 特点
 - 两根通信线：SCL（Serial Clock）、SDA（Serial Data）
