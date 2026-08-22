@@ -31,7 +31,7 @@ image: ./images/firefly3.avif
 - I2C_AcknowledgedAddress_10bit：10 位地址
 ### 1.5FLAG
 | 标志宏 | 含义 | 清除方式 |
-| ：--- | :--- | :--- |
+| :--- | :--- | :--- |
 | `I2C_FLAG_AF` | 应答失败（NACK） | 软件写 0 到 SR1 的 AF 位 |
 | `I2C_FLAG_BERR` | 总线错误 | 软件写 0 到 SR1 的 BERR 位 |
 | `I2C_FLAG_ARLO` | 仲裁丢失 | 软件写 0 到 SR1 的 ARLO 位 |
@@ -41,7 +41,7 @@ image: ./images/firefly3.avif
 | `I2C_FLAG_SMBALERT` | SMBus 警报 | 软件写 0 到 SR1 的 SMBALERT 位 |
 | `I2C_FLAG_STOPF` | 停止条件检测（从机模式） | 读取 SR1 后写 SR1 的 STOPF 位为 0 |
 | 标志宏 | 含义 | 自动清除条件 |
-| ：--- | :--- | :--- |
+| :--- | :--- | :--- |
 | `I2C_FLAG_SB` | 起始条件已发送 | 当向 `DR` 写入地址字节（或数据）后自动清除，或在发送 `STOP` 后清除 |
 | `I2C_FLAG_ADDR` | 地址已发送（主机模式）或地址匹配（从机模式） | 读取 `SR1` 后读取 `SR2` 时自动清除（软件必须执行这两个读取） |
 | `I2C_FLAG_BTF` | 字节传输完成（在 SCL 高电平期间数据稳定） | 读取 `SR1` 后写入/读取 `DR` 时自动清除 |
@@ -54,7 +54,7 @@ image: ./images/firefly3.avif
 ### 1.6事件（I2C_CheckEvent）
 主机模式常用事件：
 | 事件宏 | 标志位组合 | 含义 | 典型使用时机 |
-|--------|------------|------|--------------|
+| :--- | :--- | :--- | :--- |
 | `I2C_EVENT_MASTER_MODE_SELECT` | BUSY + MSL + SB | 起始条件已发送，总线空闲并进入主机模式 | 调用 `I2C_GenerateSTART()` 后等待此事件，然后发送从机地址 |
 | `I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED` | BUSY + MSL + ADDR + TXE + TRA | 从机地址已发送并收到 ACK，主机处于发送模式 | 发送写地址后等待此事件，随后开始发送数据 |
 | `I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED` | BUSY + MSL + ADDR | 从机地址已发送并收到 ACK，主机处于接收模式 | 发送读地址后等待此事件，准备接收数据 |
@@ -84,7 +84,7 @@ I2C_ReceiveData(I2Cx)：从数据寄存器读一个字节
 I2C_Send7bitAddress(I2Cx, Address, Direction)：发送 7 位地址（自动包含方向位）
 ### 2.4 状态监控
 | 函数原型 | 功能说明 | 参数/返回值 | 注意 |
-| ：--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | FlagStatus I2C_GetFlagStatus(I2C_TypeDef* I2Cx, uint32_t I2C_FLAG)| 查询单个标志的状态 | 返回 SET 或 RESET | 某些标志读取后会自动清除 |
 | ErrorStatus I2C_CheckEvent(I2C_TypeDef* I2Cx, uint32_t I2C_EVENT) | 检查事件是否发生（组合标志） | 返回 SUCCESS事件已发生  ERROR未发生 | 内部处理 SR1/SR2 读取顺序，推荐使用 |
 |uint32_t I2C_GetLastEvent(I2C_TypeDef* I2Cx)| 获取最近事件状态（SR1 和 SR2 组合值） | 返回 32 位值，低16位为 SR1 高16位为 SR2 | 用于自定义事件判断 |
@@ -97,5 +97,5 @@ I2C_GetLastEvent()：获取最近一次事件状态
 
 ## 3.存在问题
  BUSY 卡死
- 
+
 # 软件
