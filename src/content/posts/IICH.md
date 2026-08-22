@@ -72,16 +72,21 @@ image: ./images/firefly3.avif
 ## 2.函数
 ### 2.1 初始化和使能
 I2C_Init(I2Cx, &I2C_InitStruct)：初始化 I²C 外设
+
 I2C_Cmd(I2Cx, ENABLE)：使能 I²C
+
 I2C_SoftwareResetCmd(I2Cx, ENABLE)：软件复位
 
 ### 2.2 起始/停止
 I2C_GenerateSTART(I2Cx, ENABLE)：发送起始条件 
+
 I2C_GenerateSTOP(I2Cx, ENABLE)：发送停止条件
 ### 2.3 数据收发
-I2C_SendData(I2Cx, Data)：写一个字节到数据寄存器
-I2C_ReceiveData(I2Cx)：从数据寄存器读一个字节
-I2C_Send7bitAddress(I2Cx, Address, Direction)：发送 7 位地址（自动包含方向位）
+| 函数原型 | 功能说明 | 参数/返回值 | 注意 |
+| :--- | :--- | :--- | :--- |
+|I2C_SendData(I2Cx, Data)|写一个字节到数据寄存器|||
+|I2C_ReceiveData(I2Cx)|从数据寄存器读一个字节|||
+|I2C_Send7bitAddress(I2Cx, Address, Direction)|发送 7 位地址（自动包含方向位）|||
 ### 2.4 状态监控
 | 函数原型 | 功能说明 | 参数/返回值 | 注意 |
 | :--- | :--- | :--- | :--- |
@@ -90,10 +95,10 @@ I2C_Send7bitAddress(I2Cx, Address, Direction)：发送 7 位地址（自动包�
 |uint32_t I2C_GetLastEvent(I2C_TypeDef* I2Cx)| 获取最近事件状态（SR1 和 SR2 组合值） | 返回 32 位值，低16位为 SR1 高16位为 SR2 | 用于自定义事件判断 |
 ### 2.5 其他
 | 函数原型 | 功能说明 | 参数/返回值 | 注意 |
-| ：--- | :--- | :--- | :--- |
-|I2C_AcknowledgeConfig(I2Cx, NewState)使能/失能 ACK
-I2C_ITConfig()：配置中断
-I2C_GetLastEvent()：获取最近一次事件状态
+| :--- | :--- | :--- | :--- |
+|I2C_AcknowledgeConfig(I2Cx, NewState)|使能/失能 ACK|||
+|I2C_ITConfig()|配置中断|||
+|I2C_GetLastEvent()|获取最近一次事件状态|||
 
 ## 3.存在问题
  BUSY 卡死
